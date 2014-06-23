@@ -49,3 +49,17 @@ forecast = [
     }
   }
 ]
+
+def forecast(temps)
+  temps.each do |d|
+    days_temp = [d.values_at("day"),
+    d.values_at("temperatures")]
+    days_temp.flatten!
+    p days_temp
+    # days_temp.each do |i|
+    #   puts i
+    # end
+  end
+end
+
+forecast(forecast)
