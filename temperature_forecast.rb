@@ -55,10 +55,13 @@ def forecast(temps)
     days_temp = [d.values_at("day"),
     d.values_at("temperatures")]
     days_temp.flatten!
-    p days_temp
-    # days_temp.each do |i|
-    #   puts i
-    # end
+    days_temp.each do |i|
+      if i.is_a?(String)
+        puts i.capitalize
+      else
+        puts "  Temperature: #{i}"
+      end
+    end
   end
 end
 
