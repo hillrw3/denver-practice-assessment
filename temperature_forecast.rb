@@ -59,7 +59,8 @@ def forecast(temps)
       if i.is_a?(String)
         puts i.capitalize
       else
-        puts "  Temperature: #{i}"
+        # puts "  Temperature: #{i}" <--- Alternate to line 63
+        puts i.each{|k,v| puts "  #{k.capitalize}: #{v}"}
       end
     end
   end
